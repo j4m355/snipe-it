@@ -9,6 +9,13 @@ then
   exit
 fi
 
+# Optional NFS mount for asset persistence
+if [ -n "$NFS_ASSET_MOUNT" ]
+then
+  echo "NFS_ASSET_MOUNT has been provided. Mounting this directory"
+  mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 ${NFS_ASSET_MOUNT}: /var/lib/snipeit
+fi
+
 if [ -f /var/lib/snipeit/ssl/snipeit-ssl.crt -a -f /var/lib/snipeit/ssl/snipeit-ssl.key ]
 then
   a2enmod ssl

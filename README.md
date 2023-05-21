@@ -149,3 +149,17 @@ Thanks goes to all of these wonderful people ([emoji key](https://github.com/ken
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
 
+# Cus Build
+
+Checkout latest tag to new branch. Bring in EFS changes
+Modify Kernel.php to remove cron jobs or set time
+
+to test:
+launch new db
+modify the build script to build to a new tag to test
+create a new task def and plumb it up to the new db and the upgrade tag
+
+run new task def
+docker exec into container
+run php upgrade.php
+
