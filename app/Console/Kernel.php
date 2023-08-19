@@ -18,9 +18,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('snipeit:inventory-alerts')->daily();
-        $schedule->command('snipeit:expiring-alerts')->daily();
-        $schedule->command('snipeit:expected-checkin')->daily();
+        #$schedule->command('snipeit:inventory-alerts')->dailyAt('8:30');
+        #$schedule->command('snipeit:expiring-alerts')->dailyAt('8:30');
+        #$schedule->command('snipeit:expected-checkin')->dailyAt('8:30');
         $schedule->command('snipeit:backup')->weekly();
         $schedule->command('backup:clean')->daily();
         $schedule->command('snipeit:upcoming-audits')->daily();

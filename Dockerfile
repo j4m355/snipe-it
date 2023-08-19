@@ -45,6 +45,7 @@ php8.1-dev \
 ca-certificates \
 unzip \
 dnsutils \
+nfs-common \
 && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
