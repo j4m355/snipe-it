@@ -163,6 +163,8 @@ create a new task def and plumb it up to the new db and the upgrade tag
 run new task def
 increase alb target group health check times
 docker exec into container
+https://github.com/settings/tokens/new?scopes=&description=Composer+on+040c5fe9f2f7+2023-08-20+1337
+composer config --global --auth github-oauth.github.com <token>
 vi upgrade.php - remove the line about running as root since we are in container
 run php upgrade.php
 
