@@ -161,6 +161,8 @@ modify the build script to build to a new tag to test
 create a new task def and plumb it up to the new db and the upgrade tag
 
 run new task def
+increase alb target group health check times
 docker exec into container
+vi upgrade.php - remove the line about running as root since we are in container
 run php upgrade.php
 
